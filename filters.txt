@@ -1,0 +1,125 @@
+=== TrdBuy.filter  (TrdBuyFiltersInput)
+   - id: Int
+   - nameKz: String
+   - nameRu: String
+   - numberAnno: String
+   - refTradeMethodsId: Int
+   - refSubjectTypeId: Int
+   - totalSum: Float
+   - orgBin: String
+   - orgPid: Int
+   - orgNameKz: String
+   - orgNameRu: String
+   - refBuyStatusId: Int
+   - publishDate: String
+   - lastUpdateDate: String
+   - indexDate: String
+   - refTrdBuySigns: Int
+   - kato: String
+   - commonName: String
+   - strKato: String
+   - finYear: Int
+   - refSpecPurchaseTypeId: Int
+
+=== Lots.filter  (LotsFiltersInput)
+   - id: Int
+   - nameRu: String
+   - nameKz: String
+   - nameDescriptionKz: String
+   - nameDescriptionRu: String
+   - customerNameKz: String
+   - customerNameRu: String
+   - amount: Float
+   - trdBuyId: Int
+   - lotNumber: String
+   - refLotStatusId: Int
+   - pointList: Int
+   - enstruList: Int
+   - plnPointKatoList: String
+   - plnPointRootrecordId: Int
+   - customerId: Int
+   - customerBin: String
+   - trdBuyNumberAnno: String
+   - refTrdBuySigns: Int
+   - unionLots: Int
+   - refTradeMethodsId: Int
+   - refBuyTradeMethodsId: Int
+   - lastUpdateDate: String
+   - indexDate: String
+   - isConstructionWork: Int
+
+=== Contract.filter  (ContractFiltersInput)
+   - id: Int
+   - trdBuyId: Int
+   - trdBuyNumberAnno: String
+   - contractNumber: String
+   - contractNumberSys: String
+   - crdate: String
+   - lastUpdateDate: String
+   - signDate: String
+   - customerId: Int
+   - customerBin: String
+   - supplierId: Int
+   - supplierBiin: String
+   - finYear: Int
+   - isGu: Int
+   - refContractStatusId: Int
+   - faktTradeMethodsId: Int
+   - refContractAgrFormId: Int
+   - refContractTypeId: Int
+   - indexDate: String
+
+=== Contract.contractUnitsFilter  (ContractUnitsFiltersInput)
+   - refEnstruCode: String
+
+=== ObContract.filter  (ObContractFiltersInput)
+   - id: Int
+   - trdBuyId: Int
+   - trdBuyNumberAnno: String
+   - contractNumber: String
+   - contractNumberSys: String
+   - crdate: String
+   - lastUpdateDate: String
+   - signDate: String
+   - customerId: Int
+   - customerBin: String
+   - supplierId: Int
+   - supplierBiin: String
+   - finYear: Int
+   - isGu: Int
+   - refContractStatusId: Int
+   - faktTradeMethodsId: Int
+   - refContractAgrFormId: Int
+   - refContractTypeId: Int
+   - indexDate: String
+
+=== Plans.filter  (PlansFiltersInput)
+   - id: Int
+   - nameKz: String
+   - nameRu: String
+   - subjectNameKz: String
+   - subjectNameRu: String
+   - nameDescriptionKz: String
+   - nameDescriptionRu: String
+   - plnPointYear: Int
+   - subjectBiin: String
+   - sysSubjectsId: Int
+   - rootrecordId: Int
+   - refMonthsId: Int
+   - refPlnPointStatusId: Int
+   - refSubjectTypeId: Int
+   - refEnstruCode: String
+   - refTradeMethodsId: Int
+   - refJustificationId: Int
+   - dateCreate: String
+   - timestamp: String
+   - isDeleted: Int
+   - indexDate: String
+
+=== TrdApp.filter  (TrdAppFiltersInput)
+   - id: Int
+   - buyId: Int
+   - protId: Int
+   - supplierId: Int
+   - supplierBinIin: String
+   - dateApply: String

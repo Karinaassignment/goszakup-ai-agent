@@ -1,0 +1,88 @@
+#   docker compose up -d                — база и API агента (http://localhost:8000/docs)
+#   docker compose run --rm etl         — инкрементальное обновление
+#   docker compose run --rm agent-cli   — агент в терминале
+#   docker compose --profile llm up -d  — плюс LLM; модель: ollama pull qwen3:4b-instruct-2507-q4_K_M
+name: answer                            # от имени проекта зависит том answer_pgdata с базой
+
+x-app: &app
+  build: .
+  image: goszakup-agent:1.0
+  env_file: [db.env, secret_key.env]
+  environment:
+    PG_HOST: db
+    PG_PORT: "5432"
+    DATA_DIR: /data
+    # без запущенного сервиса llm агент работает на правилах и RAG
+    LLM_BASE_URL: http://llm:11434/v1
+    LLM_MODEL: qwen3:4b-instruct-2507-q4_K_M
+  volumes:
+    - ./raw:/data/raw
+    - ./raw_market:/data/raw_market
+    - ./market_codes.json:/data/market_codes.json
+  depends_on:
+    db:
+      condition: service_healthy
+
+services:
+  db:
+    image: postgres:16
+    container_name: goszakup_db
+    restart: unless-stopped
+    env_file: db.env
+    environment:
+      POSTGRES_DB: goszakup
+      POSTGRES_USER: etl
+    ports:
+      - "5433:5432"                   # 5432 занят локальным PostgreSQL 18
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:                      # агент и ETL стартуют только после готовности базы
+      test: ["CMD-SHELL", "pg_isready -U etl -d goszakup"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  agent:
+    <<: *app
+    container_name: goszakup_agent
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+
+  etl:
+    <<: *app
+    profiles: [etl]
+    command: ["python", "update.py"]
+    healthcheck:
+      disable: true
+
+  agent-cli:
+    <<: *app
+    profiles: [cli]
+    command: ["python", "-m", "agent"]
+    stdin_open: true
+    tty: true
+    healthcheck:
+      disable: true
+
+  llm:
+    image: ollama/ollama:0.6.8
+    container_name: goszakup_llm
+    profiles: [llm]
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  pgdata:
+  ollama:

@@ -1,0 +1,17 @@
+# Секреты (ТЗ п. 11: защита токенов API) — никогда не коммитить
+*.env
+k8s/secret.yaml
+
+# Данные выгрузки — воспроизводятся скриптами ingest.py / market.py / update.py
+raw/
+raw_market/
+logs/
+
+# Модели, кэши, служебное
+Qwan3-4B/
+__pycache__/
+.deepeval/
+.vscode/
+.idea/
+*.tmp
+*.log

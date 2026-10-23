@@ -1,0 +1,57 @@
+# Ollama для разбора вопросов (необязательно). Модель:
+#   kubectl -n goszakup exec deploy/llm -- ollama pull qwen3:4b-instruct-2507-q4_K_M
+# Без GPU уберите nvidia.com/gpu из limits.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: llm-models
+  namespace: goszakup
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: llm
+  namespace: goszakup
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: llm}
+  template:
+    metadata:
+      labels: {app: llm}
+    spec:
+      containers:
+        - name: ollama
+          image: ollama/ollama:0.6.8
+          ports:
+            - containerPort: 11434
+          readinessProbe:
+            httpGet: {path: /api/tags, port: 11434}
+            periodSeconds: 10
+          resources:
+            requests: {cpu: "1", memory: 4Gi}
+            limits:
+              memory: 8Gi
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: models
+              mountPath: /root/.ollama
+      volumes:
+        - name: models
+          persistentVolumeClaim: {claimName: llm-models}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: llm
+  namespace: goszakup
+spec:
+  selector: {app: llm}
+  ports:
+    - port: 11434
+      targetPort: 11434

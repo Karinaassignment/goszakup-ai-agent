@@ -1,0 +1,11 @@
+# Сырые выгрузки OWS v3 для заданий ETL
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: goszakup-data
+  namespace: goszakup
+spec:
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 10Gi

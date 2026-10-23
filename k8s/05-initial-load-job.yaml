@@ -1,0 +1,27 @@
+# Первичная полная выгрузка (несколько часов); при перезапуске продолжается с места остановки.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: initial-load
+  namespace: goszakup
+spec:
+  backoffLimit: 3
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: etl
+          image: goszakup-agent:1.0          # замените на образ из своего реестра
+          command: ["sh", "-c", "python ingest.py && python market.py && python load.py"]
+          envFrom:
+            - configMapRef: {name: goszakup-config}
+            - secretRef: {name: goszakup-secrets}
+          resources:
+            requests: {cpu: 500m, memory: 2Gi}
+            limits: {memory: 6Gi}
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim: {claimName: goszakup-data}

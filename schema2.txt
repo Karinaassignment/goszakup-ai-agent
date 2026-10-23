@@ -1,0 +1,206 @@
+=== ContractUnits
+   - id: Int
+   - lotId: Int
+   - plnPointId: Int
+   - itemPrice: Float
+   - itemPriceWnds: Float
+   - quantity: Float
+   - totalSum: Float
+   - totalSumWnds: Float
+   - contractSum: Float
+   - contractSumWnds: Float
+   - factSum: Float
+   - factSumWnds: Float
+   - ksProc: Float
+   - ksSum: Float
+   - deleted: Int
+   - trdBuyId: Int
+   - contractRegistryId: Int
+   - crdate: String
+   - execFaktDate: String
+   - execPlanDate: String
+   - executed: Int
+   - parentId: Int
+   - rootId: Int
+   - refContractStatusId: Int
+   - crDeleted: Int
+   - refAmendmAgreemJustifId: Int
+   - systemId: Int
+   - indexDate: String
+   - refEnstruCode: String
+   - Plans: PlnPoint
+   - ContractUnitsCert: ContractUnitsCert
+   - Spec: ContractSpecSum
+   - Kzs: ContractKzs
+   - RefAmendmAgreemJustif: RefAmendmAgreemJustif
+
+=== ObContractUnits
+   - id: Int
+   - lotId: Int
+   - plnPointId: Int
+   - itemPrice: Float
+   - itemPriceWnds: Float
+   - quantity: Float
+   - totalSum: Float
+   - totalSumWnds: Float
+   - contractSum: Float
+   - contractSumWnds: Float
+   - factSum: Float
+   - factSumWnds: Float
+   - ksProc: Float
+   - ksSum: Float
+   - deleted: Int
+   - trdBuyId: Int
+   - contractRegistryId: Int
+   - crdate: String
+   - execFaktDate: String
+   - execPlanDate: String
+   - executed: Int
+   - parentId: Int
+   - rootId: Int
+   - refContractStatusId: Int
+   - crDeleted: Int
+   - refAmendmAgreemJustifId: Int
+   - systemId: Int
+   - indexDate: String
+   - ObPlans: ObPlnPoint
+   - Spec: ContractSpecSum
+   - Kzs: ContractKzs
+   - RefAmendmAgreemJustif: RefAmendmAgreemJustif
+
+=== TrdAppLots
+   - id: Int
+   - appId: Int
+   - lotId: Int
+   - pointList: Int
+   - statusId: Int
+   - price: Float
+   - amount: Float
+   - discountValue: Float
+   - discountPrice: Float
+   - systemId: Int
+   - indexDate: String
+   - Lot: Lots
+   - Plans: PlnPoint
+   - Offers: TrdPriceOfferPoint
+   - RefAppStatus: RefPoSt
+
+=== PlnPointsKato
+   - id: Int
+   - plnPointsId: Int
+   - refKatoCode: String
+   - refCountriesCode: String
+   - fullDeliveryPlaceNameRu: String
+   - fullDeliveryPlaceNameKz: String
+   - count: Float
+   - isActive: Int
+   - isDeleted: Int
+   - systemId: Int
+   - indexDate: String
+   - RefKato: RefKato
+   - RefCountries: RefCountries
+
+=== RefEnstru
+   - id: Int
+   - nameRu: String
+   - nameKz: String
+   - code: String
+   - parentId: Int
+   - level: Int
+   - r: Int
+   - g: Int
+   - s: Int
+   - descRu: String
+   - descKz: String
+   - mkei: Int
+   - edizm: String
+
+=== RefUnits
+   - nameRu: String
+   - nameKz: String
+   - code: String
+   - code2: String
+   - alphaCode: String
+
+=== Subject
+   - pid: Int
+   - bin: String
+   - iin: String
+   - inn: String
+   - unp: String
+   - regdate: String
+   - crdate: Int
+   - indexDate: String
+   - numberReg: String
+   - series: String
+   - name: String
+   - nameRu: String
+   - nameKz: String
+   - fullName: String
+   - fullNameRu: String
+   - fullNameKz: String
+   - email: String
+   - phone: String
+   - website: String
+   - lastUpdateDate: String
+   - countryCode: String
+   - katoList: String
+   - qvazi: Int
+   - customer: Int
+   - organizer: Int
+   - markNationalCompany: Int
+   - refKopfCode: String
+   - markAssocWithDisab: Int
+   - year: Int
+   - markResident: Int
+   - systemId: Int
+   - supplier: Int
+   - typeSupplier: Int
+   - krpCode: Int
+   - branches: String
+   - parentSubject: String
+   - parentNameKz: String
+   - parentNameRu: String
+   - okedList: Int
+   - kseCode: Int
+   - markWorldCompany: Int
+   - markStateMonopoly: Int
+   - markNaturalMonopoly: Int
+   - markPatronymicProducer: Int
+   - markPatronymicSupplyer: Int
+   - markSmallEmployer: Int
+   - isSingleOrg: Int
+   - Address: SubjectAddress
+   - Employees: SubjectUsers
+   - RefCountries: RefCountries
+   - Admins: SubjectReportAdmins
+
+=== RefLotsStatus
+   - id: Int
+   - nameRu: String
+   - nameKz: String
+   - code: String
+
+=== RefBuyStatus
+   - id: Int
+   - nameRu: String
+   - nameKz: String
+   - code: String
+
+=== RefContractStatus
+   - id: Int
+   - nameRu: String
+   - nameKz: String
+   - code: String
+
+=== RefTradeMethods
+   - id: Int
+   - nameRu: String
+   - nameKz: String
+   - code: String
+   - type: Int
+   - symbolCode: String
+   - isActive: Int
+   - f1: Int
+   - ord: Int
+   - f2: Int

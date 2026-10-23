@@ -1,0 +1,331 @@
+{
+  "data": {
+    "Contract": [
+      {
+        "id": 25976182,
+        "contractNumber": "000740001307/260168/00",
+        "signDate": "2026-10-21 10:15:19",
+        "finYear": 2026,
+        "contractSum": 41830.38,
+        "refCurrencyCode": "KZT",
+        "customerBin": "000740001307",
+        "supplierBiin": "110340018293",
+        "trdBuyId": 17751600,
+        "refContractStatusId": 190,
+        "RefContractStatus": {
+          "nameRu": "Действует"
+        },
+        "ContractUnits": [
+          {
+            "id": 58381512,
+            "lotId": 43532158,
+            "plnPointId": 87872260,
+            "itemPrice": 34,
+            "quantity": 100,
+            "totalSum": 3400,
+            "refEnstruCode": [
+              "263030.900.000146"
+            ],
+            "Plans": {
+              "nameRu": "Коннектор",
+              "refUnitsCode": "796",
+              "refEnstruCode": "263030.900.000146",
+              "price": 34.48,
+              "count": 100,
+              "RefUnits": {
+                "nameRu": "Штука",
+                "code": "796"
+              },
+              "RefEnstru": {
+                "code": "263030.900.000146",
+                "nameRu": "Коннектор",
+                "edizm": ""
+              },
+              "PlansKato": [
+                {
+                  "refKatoCode": "711210000",
+                  "fullDeliveryPlaceNameRu": "г.Астана, район Есиль г. Астана, район Есиль, Проезд 77, здание 2/2."
+                }
+              ]
+            }
+          },
+          {
+            "id": 58381511,
+            "lotId": 43532157,
+            "plnPointId": 87881729,
+            "itemPrice": 34991.38,
+            "quantity": 1,
+            "totalSum": 34991.38,
+            "refEnstruCode": [
+              "264031.900.000007"
+            ],
+            "Plans": {
+              "nameRu": "Колонка",
+              "refUnitsCode": "796",
+              "refEnstruCode": "264031.900.000007",
+              "price": 34991.38,
+              "count": 1,
+              "RefUnits": {
+                "nameRu": "Штука",
+                "code": "796"
+              },
+              "RefEnstru": {
+                "code": "264031.900.000007",
+                "nameRu": "Колонка",
+                "edizm": ""
+              },
+              "PlansKato": [
+                {
+                  "refKatoCode": "711210000",
+                  "fullDeliveryPlaceNameRu": "г.Астана, район Есиль г. Астана, район Есиль, Проезд 77, здание 2/2."
+                }
+              ]
+            }
+          },
+          {
+            "id": 58381510,
+            "lotId": 43532156,
+            "plnPointId": 87881777,
+            "itemPrice": 3439,
+            "quantity": 1,
+            "totalSum": 3439,
+            "refEnstruCode": [
+              "262021.900.000098"
+            ],
+            "Plans": {
+              "nameRu": "Флеш-накопитель",
+              "refUnitsCode": "796",
+              "refEnstruCode": "262021.900.000098",
+              "price": 3439.66,
+              "count": 1,
+              "RefUnits": {
+                "nameRu": "Штука",
+                "code": "796"
+              },
+              "RefEnstru": {
+                "code": "262021.900.000098",
+                "nameRu": "Флеш-накопитель",
+                "edizm": ""
+              },
+              "PlansKato": [
+                {
+                  "refKatoCode": "711210000",
+                  "fullDeliveryPlaceNameRu": "г.Астана, район Есиль г. Астана, район Есиль, Проезд 77, здание 2/2."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": 25966067,
+        "contractNumber": "000740001307/260152/01",
+        "signDate": "2026-10-13 18:02:23",
+        "finYear": 2026,
+        "contractSum": 298632.3,
+        "refCurrencyCode": "KZT",
+        "customerBin": "000740001307",
+        "supplierBiin": "871005350754",
+        "trdBuyId": 17539982,
+        "refContractStatusId": 390,
+        "RefContractStatus": {
+          "nameRu": "Исполнен"
+        },
+        "ContractUnits": [
+          {
+            "id": 58365730,
+            "lotId": 43058785,
+            "plnPointId": 88215108,
+            "itemPrice": 298632.3,
+            "quantity": 1,
+            "totalSum": 298632.3,
+            "refEnstruCode": [
+              "910112.000.000000"
+            ],
+            "Plans": {
+              "nameRu": "Услуги по ведению архивных документов",
+              "refUnitsCode": "5114",
+              "refEnstruCode": "910112.000.000000",
+              "price": 298632.3,
+              "count": 1,
+              "RefUnits": {
+                "nameRu": "Одна услуга",
+                "code": "5114"
+              },
+              "RefEnstru": {
+                "code": "910112.000.000000",
+                "nameRu": "Услуги по ведению архивных документов",
+                "edizm": ""
+              },
+              "PlansKato": [
+                {
+                  "refKatoCode": "711210000",
+                  "fullDeliveryPlaceNameRu": "г.Астана, район Есиль г. Астана, район Есиль, Проезд 77, здание 2/2."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": 25952302,
+        "contractNumber": "000740001307/260166/00",
+        "signDate": "2026-10-13 10:15:20",
+        "finYear": 2026,
+        "contractSum": 189000,
+        "refCurrencyCode": "KZT",
+        "customerBin": "000740001307",
+        "supplierBiin": "200940006954",
+        "trdBuyId": 17729264,
+        "refContractStatusId": 390,
+        "RefContractStatus": {
+          "nameRu": "Исполнен"
+        },
+        "ContractUnits": [
+          {
+            "id": 58342115,
+            "lotId": 43482794,
+            "plnPointId": 88107992,
+            "itemPrice": 189000,
+            "quantity": 1,
+            "totalSum": 189000,
+            "refEnstruCode": [
+              "382129.000.000000"
+            ],
+            "Plans": {
+              "nameRu": "Услуги по удалению неопасных отходов/имущества/материалов",
+              "refUnitsCode": "5114",
+              "refEnstruCode": "382129.000.000000",
+              "price": 354310.34,
+              "count": 1,
+              "RefUnits": {
+                "nameRu": "Одна услуга",
+                "code": "5114"
+              },
+              "RefEnstru": {
+                "code": "382129.000.000000",
+                "nameRu": "Услуги по удалению неопасных отходов/имущества/материалов",
+                "edizm": ""
+              },
+              "PlansKato": [
+                {
+                  "refKatoCode": "711210000",
+                  "fullDeliveryPlaceNameRu": "г.Астана, район Есиль г. Астана, район Есиль, Проезд 77, здание 2/2."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": 25932355,
+        "contractNumber": "000740001307/260044/01",
+        "signDate": "2026-10-09 19:03:06",
+        "finYear": 2026,
+        "contractSum": 56250,
+        "refCurrencyCode": "KZT",
+        "customerBin": "000740001307",
+        "supplierBiin": "820406350535",
+        "trdBuyId": 16241547,
+        "refContractStatusId": 390,
+        "RefContractStatus": {
+          "nameRu": "Исполнен"
+        },
+        "ContractUnits": [
+          {
+            "id": 58305680,
+            "lotId": 39821257,
+            "plnPointId": 81524360,
+            "itemPrice": 56250,
+            "quantity": 1,
+            "totalSum": 63750,
+            "refEnstruCode": [
+              "712014.000.000000"
+            ],
+            "Plans": {
+              "nameRu": "Услуги по техническому контролю (осмотру) дорожных транспортных средств",
+              "refUnitsCode": "5114",
+              "refEnstruCode": "712014.000.000000",
+              "price": 131896.55,
+              "count": 1,
+              "RefUnits": {
+                "nameRu": "Одна услуга",
+                "code": "5114"
+              },
+              "RefEnstru": {
+                "code": "712014.000.000000",
+                "nameRu": "Услуги по техническому контролю (осмотру) дорожных транспортных средств",
+                "edizm": ""
+              },
+              "PlansKato": [
+                {
+                  "refKatoCode": "711210000",
+                  "fullDeliveryPlaceNameRu": "г.Астана, район Есиль Проезд 77, здание 2/2"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": 25932211,
+        "contractNumber": "000740001307/260165/00",
+        "signDate": "2026-10-16 09:19:28",
+        "finYear": 2026,
+        "contractSum": 28860,
+        "refCurrencyCode": "KZT",
+        "customerBin": "000740001307",
+        "supplierBiin": "910424351119",
+        "trdBuyId": 17711871,
+        "refContractStatusId": 190,
+        "RefContractStatus": {
+          "nameRu": "Действует"
+        },
+        "ContractUnits": [
+          {
+            "id": 58305493,
+            "lotId": 43443744,
+            "plnPointId": 87788080,
+            "itemPrice": 14430,
+            "quantity": 2,
+            "totalSum": 28860,
+            "refEnstruCode": [
+              "263013.000.000000"
+            ],
+            "Plans": {
+              "nameRu": "Веб-камера",
+              "refUnitsCode": "796",
+              "refEnstruCode": "263013.000.000000",
+              "price": 16974.14,
+              "count": 2,
+              "RefUnits": {
+                "nameRu": "Штука",
+                "code": "796"
+              },
+              "RefEnstru": {
+                "code": "263013.000.000000",
+                "nameRu": "Веб-камера",
+                "edizm": ""
+              },
+              "PlansKato": [
+                {
+                  "refKatoCode": "711210000",
+                  "fullDeliveryPlaceNameRu": "г.Астана, район Есиль г. Астана, район Есиль, Проезд 77, здание 2/2."
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "extensions": {
+    "pageInfo": {
+      "limitPage": 5,
+      "totalCount": 1880,
+      "hasNextPage": true,
+      "lastId": 25932211,
+      "lastIndexDate": "2026-10-16T05:04:21.016"
+    }
+  }
+}

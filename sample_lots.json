@@ -1,0 +1,180 @@
+{
+  "data": {
+    "Lots": [
+      {
+        "id": 43690365,
+        "lotNumber": "81064468-ЗЦП4",
+        "nameRu": "Колесо",
+        "count": 10,
+        "amount": 38530,
+        "trdBuyId": 17843566,
+        "refLotStatusId": 240,
+        "enstruList": [
+          0
+        ],
+        "plnPointKatoList": [
+          "711210000"
+        ],
+        "RefLotsStatus": {
+          "nameRu": "Опубликован (прием ценовых предложений)"
+        },
+        "TrdBuy": {
+          "id": 17843566,
+          "numberAnno": "17843566-1",
+          "publishDate": "2026-10-21 16:41:09",
+          "finYear": [
+            2026
+          ],
+          "kato": [
+            "711210000"
+          ],
+          "refTradeMethodsId": 3,
+          "RefTradeMethods": {
+            "nameRu": "Запрос ценовых предложений"
+          }
+        }
+      },
+      {
+        "id": 43688669,
+        "lotNumber": "80800392-ЗЦП1",
+        "nameRu": "Весы",
+        "count": 4,
+        "amount": 354137.92,
+        "trdBuyId": 17842664,
+        "refLotStatusId": 240,
+        "enstruList": [
+          0
+        ],
+        "plnPointKatoList": [
+          ""
+        ],
+        "RefLotsStatus": {
+          "nameRu": "Опубликован (прием ценовых предложений)"
+        },
+        "TrdBuy": {
+          "id": 17842664,
+          "numberAnno": "17842664-1",
+          "publishDate": "2026-10-21 16:24:19",
+          "finYear": [
+            2026
+          ],
+          "kato": [
+            "711210000"
+          ],
+          "refTradeMethodsId": 3,
+          "RefTradeMethods": {
+            "nameRu": "Запрос ценовых предложений"
+          }
+        }
+      },
+      {
+        "id": 43688668,
+        "lotNumber": "80835936-ЗЦП1",
+        "nameRu": "Устройство пломбировочное",
+        "count": 20,
+        "amount": 86206.8,
+        "trdBuyId": 17842664,
+        "refLotStatusId": 240,
+        "enstruList": [
+          1063184
+        ],
+        "plnPointKatoList": [
+          "711210000"
+        ],
+        "RefLotsStatus": {
+          "nameRu": "Опубликован (прием ценовых предложений)"
+        },
+        "TrdBuy": {
+          "id": 17842664,
+          "numberAnno": "17842664-1",
+          "publishDate": "2026-10-21 16:24:19",
+          "finYear": [
+            2026
+          ],
+          "kato": [
+            "711210000"
+          ],
+          "refTradeMethodsId": 3,
+          "RefTradeMethods": {
+            "nameRu": "Запрос ценовых предложений"
+          }
+        }
+      },
+      {
+        "id": 43623853,
+        "lotNumber": "81064468-ЗЦП3",
+        "nameRu": "Колесо",
+        "count": 10,
+        "amount": 38530,
+        "trdBuyId": 17801531,
+        "refLotStatusId": 370,
+        "enstruList": [
+          0
+        ],
+        "plnPointKatoList": [
+          "711210000"
+        ],
+        "RefLotsStatus": {
+          "nameRu": "Закупка не состоялась"
+        },
+        "TrdBuy": {
+          "id": 17801531,
+          "numberAnno": "17801531-1",
+          "publishDate": "2026-10-16 17:37:35",
+          "finYear": [
+            2026
+          ],
+          "kato": [
+            "711210000"
+          ],
+          "refTradeMethodsId": 3,
+          "RefTradeMethods": {
+            "nameRu": "Запрос ценовых предложений"
+          }
+        }
+      },
+      {
+        "id": 43573792,
+        "lotNumber": "81064468-ЗЦП2",
+        "nameRu": "Колесо",
+        "count": 10,
+        "amount": 38530,
+        "trdBuyId": 17772512,
+        "refLotStatusId": 370,
+        "enstruList": [
+          0
+        ],
+        "plnPointKatoList": [
+          "711210000"
+        ],
+        "RefLotsStatus": {
+          "nameRu": "Закупка не состоялась"
+        },
+        "TrdBuy": {
+          "id": 17772512,
+          "numberAnno": "17772512-1",
+          "publishDate": "2026-10-13 16:54:01",
+          "finYear": [
+            2026
+          ],
+          "kato": [
+            "711210000"
+          ],
+          "refTradeMethodsId": 3,
+          "RefTradeMethods": {
+            "nameRu": "Запрос ценовых предложений"
+          }
+        }
+      }
+    ]
+  },
+  "extensions": {
+    "pageInfo": {
+      "limitPage": 5,
+      "totalCount": 5431,
+      "hasNextPage": true,
+      "lastId": 43573792,
+      "lastIndexDate": "2026-10-15 17:20:05"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+# crontab -e; путь заменить на свой
+0 3 * * * cd /opt/goszakup && /usr/bin/python3 update.py >> logs/update.log 2>&1

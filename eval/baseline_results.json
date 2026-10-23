@@ -1,0 +1,1264 @@
+[
+  {
+    "summary": {
+      "title": "Основной набор",
+      "questions": 27,
+      "seconds": 3.6,
+      "fact_accuracy": 100.0,
+      "facts_ok": 108,
+      "facts_n": 108,
+      "recall": 100.0,
+      "recall_ok": 108,
+      "recall_n": 108,
+      "precision": 100.0,
+      "precision_ok": 662,
+      "precision_n": 662,
+      "type_accuracy": 100.0,
+      "params_accuracy": 100.0,
+      "fully_correct": 27,
+      "by_type": {
+        "anomaly": 100.0,
+        "fairness": 100.0,
+        "volume": 100.0,
+        "search": 100.0,
+        "analytics": 100.0,
+        "compare": 100.0
+      },
+      "passed": true,
+      "target": 85.0,
+      "langs": {
+        "ru": 21,
+        "kz": 6
+      }
+    },
+    "cases": [
+      {
+        "id": "A1",
+        "question": "Найди закупки с отклонением цены > 30% от средневзвешенной по данному ЕНСТРУ",
+        "expected_type": "anomaly",
+        "got_type": "anomaly",
+        "type_ok": true,
+        "facts": {
+          "top_contract_id": true,
+          "n_analyzed": true,
+          "n_flagged": true,
+          "excess_money": true
+        },
+        "truth": {
+          "top_contract_id": "20858967",
+          "n_analyzed": 42251,
+          "n_flagged": 12002,
+          "excess_money": 21509781099.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 47,
+        "examples_n": 47,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.8
+      },
+      {
+        "id": "A2",
+        "question": "Найди закупки по коду 192026.510.000000 с отклонением цены > 50% от средневзвешенной",
+        "expected_type": "anomaly",
+        "got_type": "anomaly",
+        "type_ok": true,
+        "facts": {
+          "top_contract_id": true,
+          "n_analyzed": true,
+          "n_flagged": true,
+          "excess_money": true
+        },
+        "truth": {
+          "top_contract_id": "19133397",
+          "n_analyzed": 96,
+          "n_flagged": 1,
+          "excess_money": 113627370.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 5,
+        "examples_n": 5,
+        "errors": [],
+        "params": {
+          "enstru": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.0
+      },
+      {
+        "id": "A3",
+        "question": "Найди закупки, цена которых ниже средневзвешенной по ЕНС ТРУ более чем на 40%",
+        "expected_type": "anomaly",
+        "got_type": "anomaly",
+        "type_ok": true,
+        "facts": {
+          "n_analyzed": true,
+          "n_flagged": true
+        },
+        "truth": {
+          "n_analyzed": 42251,
+          "n_flagged": 10054
+        },
+        "facts_ok": 2,
+        "facts_n": 2,
+        "examples_ok": 49,
+        "examples_n": 49,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.8
+      },
+      {
+        "id": "A4",
+        "question": "Найди закупки 990740002243 в 2025 году с отклонением цены > 30% от средневзвешенной",
+        "expected_type": "anomaly",
+        "got_type": "anomaly",
+        "type_ok": true,
+        "facts": {
+          "top_contract_id": true,
+          "n_analyzed": true,
+          "n_flagged": true,
+          "excess_money": true
+        },
+        "truth": {
+          "top_contract_id": "23422974",
+          "n_analyzed": 2451,
+          "n_flagged": 621,
+          "excess_money": 1911251771.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 41,
+        "examples_n": 41,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.3
+      },
+      {
+        "id": "A5",
+        "question": "Найди закупки дизельного топлива с отклонением цены > 30% от средневзвешенной",
+        "expected_type": "anomaly",
+        "got_type": "anomaly",
+        "type_ok": true,
+        "facts": {
+          "top_contract_id": true,
+          "n_analyzed": true,
+          "n_flagged": true,
+          "excess_money": true
+        },
+        "truth": {
+          "top_contract_id": "19133397",
+          "n_analyzed": 130,
+          "n_flagged": 5,
+          "excess_money": 155908608.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 23,
+        "examples_n": 23,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.2
+      },
+      {
+        "id": "A6",
+        "question": "Дизель отыны бағасы орташа өлшемді бағадан 30% жоғары сатып алуларды тап",
+        "expected_type": "anomaly",
+        "got_type": "anomaly",
+        "type_ok": true,
+        "facts": {
+          "top_contract_id": true,
+          "n_analyzed": true,
+          "n_flagged": true,
+          "excess_money": true
+        },
+        "truth": {
+          "top_contract_id": "19133397",
+          "n_analyzed": 130,
+          "n_flagged": 5,
+          "excess_money": 155908608.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 23,
+        "examples_n": 23,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.5
+      },
+      {
+        "id": "F1",
+        "question": "Оцени адекватность цены договора 11-2024/ООФ относительно аналогичных контрактов других ведомств в идентичном городе поставки",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "contract_id": true,
+          "actual_price": true,
+          "fair_price": true,
+          "deviation_pct": true,
+          "n_comparables": true,
+          "n_customers": true
+        },
+        "truth": {
+          "contract_id": "19133397",
+          "actual_price": 400.78,
+          "fair_price": 245.9519206481438,
+          "deviation_pct": 63.0,
+          "n_comparables": 24,
+          "n_customers": 6
+        },
+        "facts_ok": 6,
+        "facts_n": 6,
+        "examples_ok": 46,
+        "examples_n": 46,
+        "errors": [],
+        "params": {
+          "lot": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.1
+      },
+      {
+        "id": "F2",
+        "question": "Оцени адекватность цены договора 000740001307/250052/01 относительно аналогичных контрактов других ведомств",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "contract_id": true,
+          "actual_price": true,
+          "fair_price": true,
+          "deviation_pct": true,
+          "n_comparables": true,
+          "n_customers": true
+        },
+        "truth": {
+          "contract_id": "24066561",
+          "actual_price": 570000.0,
+          "fair_price": 752704.8643768213,
+          "deviation_pct": -24.3,
+          "n_comparables": 66,
+          "n_customers": 8
+        },
+        "facts_ok": 6,
+        "facts_n": 6,
+        "examples_ok": 45,
+        "examples_n": 45,
+        "errors": [],
+        "params": {
+          "lot": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.1
+      },
+      {
+        "id": "F3",
+        "question": "Оцени справедливость цены лота 71742654-КПКО1",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "contract_id": true,
+          "actual_price": true,
+          "fair_price": true,
+          "deviation_pct": true,
+          "n_comparables": true,
+          "n_customers": true
+        },
+        "truth": {
+          "contract_id": "21311202",
+          "actual_price": 11950.0,
+          "fair_price": 36268.95474781193,
+          "deviation_pct": -67.1,
+          "n_comparables": 521,
+          "n_customers": 64
+        },
+        "facts_ok": 6,
+        "facts_n": 6,
+        "examples_ok": 36,
+        "examples_n": 36,
+        "errors": [],
+        "params": {
+          "lot": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.1
+      },
+      {
+        "id": "F4",
+        "question": "000740001307/250052/01 келісімшарт бағасының әділдігін бағала",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "contract_id": true,
+          "actual_price": true,
+          "fair_price": true,
+          "deviation_pct": true,
+          "n_comparables": true,
+          "n_customers": true
+        },
+        "truth": {
+          "contract_id": "24066561",
+          "actual_price": 570000.0,
+          "fair_price": 752704.8643768213,
+          "deviation_pct": -24.3,
+          "n_comparables": 66,
+          "n_customers": 8
+        },
+        "facts_ok": 6,
+        "facts_n": 6,
+        "examples_ok": 45,
+        "examples_n": 45,
+        "errors": [],
+        "params": {
+          "lot": true,
+          "lang": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.1
+      },
+      {
+        "id": "F5",
+        "question": "Оцени адекватность цены лота 99999999-ЗЦП1",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "текст «не найден»": true
+        },
+        "truth": {},
+        "facts_ok": 1,
+        "facts_n": 1,
+        "examples_ok": 0,
+        "examples_n": 0,
+        "errors": [],
+        "params": {
+          "lot": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.1
+      },
+      {
+        "id": "F6",
+        "question": "Оцени адекватность цены лота 81064468-ЗЦП4",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "customer_bin": true,
+          "текст «нет заключённого договора»": true
+        },
+        "truth": {
+          "customer_bin": "000740001307"
+        },
+        "facts_ok": 2,
+        "facts_n": 2,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {
+          "lot": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.1
+      },
+      {
+        "id": "V1",
+        "question": "Выяви нетипичное завышение количества ТРУ по сравнению с предыдущими годами",
+        "expected_type": "volume",
+        "got_type": "volume",
+        "type_ok": true,
+        "facts": {
+          "n_total": true,
+          "n_anomaly": true,
+          "n_candidates": true,
+          "excess_money": true
+        },
+        "truth": {
+          "n_total": 11727,
+          "n_anomaly": 18,
+          "n_candidates": 652,
+          "excess_money": 214583941.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 8,
+        "examples_n": 8,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.0
+      },
+      {
+        "id": "V2",
+        "question": "Выяви нетипичное завышение количества закупок у 990740002243 в 2025 году",
+        "expected_type": "volume",
+        "got_type": "volume",
+        "type_ok": true,
+        "facts": {
+          "n_total": true,
+          "n_anomaly": true,
+          "n_candidates": true,
+          "excess_money": true
+        },
+        "truth": {
+          "n_total": 1109,
+          "n_anomaly": 3,
+          "n_candidates": 152,
+          "excess_money": 26249306.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.0
+      },
+      {
+        "id": "V3",
+        "question": "Алдыңғы жылдармен салыстырғанда ТЖҚ санының әдеттен тыс асырылуын анықта",
+        "expected_type": "volume",
+        "got_type": "volume",
+        "type_ok": true,
+        "facts": {
+          "n_total": true,
+          "n_anomaly": true,
+          "n_candidates": true,
+          "excess_money": true
+        },
+        "truth": {
+          "n_total": 11727,
+          "n_anomaly": 18,
+          "n_candidates": 652,
+          "excess_money": 214583941.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 8,
+        "examples_n": 8,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.0
+      },
+      {
+        "id": "S1",
+        "question": "Найди договоры заказчика 000740001307 за 2025 год",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "total_money": true,
+          "top_contract_id": true,
+          "top_date": true,
+          "top_supplier_bin": true
+        },
+        "truth": {
+          "n_contracts": 178,
+          "total_money": 371797462.45,
+          "top_contract_id": "24003493",
+          "top_date": "19.12.2025",
+          "top_supplier_bin": "600322350327"
+        },
+        "facts_ok": 5,
+        "facts_n": 5,
+        "examples_ok": 51,
+        "examples_n": 51,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.0
+      },
+      {
+        "id": "S2",
+        "question": "Покажи договоры по коду 192026.510.000000 в 2024 году",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "total_money": true,
+          "top_contract_id": true,
+          "top_date": true,
+          "top_supplier_bin": true
+        },
+        "truth": {
+          "n_contracts": 24,
+          "total_money": 901416914.74,
+          "top_contract_id": "19133397",
+          "top_date": "03.01.2024",
+          "top_supplier_bin": "160240018259"
+        },
+        "facts_ok": 5,
+        "facts_n": 5,
+        "examples_ok": 49,
+        "examples_n": 49,
+        "errors": [],
+        "params": {
+          "years": true,
+          "enstru": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.1
+      },
+      {
+        "id": "S3",
+        "question": "990740002243 тапсырыс берушінің 2026 жылғы келісімшарттарын көрсет",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "total_money": true,
+          "top_contract_id": true,
+          "top_date": true,
+          "top_supplier_bin": true
+        },
+        "truth": {
+          "n_contracts": 1633,
+          "total_money": 11666434221.73,
+          "top_contract_id": "24837434",
+          "top_date": "16.03.2026",
+          "top_supplier_bin": "021240001744"
+        },
+        "facts_ok": 5,
+        "facts_n": 5,
+        "examples_ok": 49,
+        "examples_n": 49,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true,
+          "lang": true
+        },
+        "params_ok": 3,
+        "params_n": 3,
+        "seconds": 0.0
+      },
+      {
+        "id": "S4",
+        "question": "Найди договоры на дизельное топливо у 971040001050",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "total_money": true,
+          "top_contract_id": true,
+          "top_date": true,
+          "top_supplier_bin": true
+        },
+        "truth": {
+          "n_contracts": 18,
+          "total_money": 271642949.62,
+          "top_contract_id": "25721255",
+          "top_date": "24.08.2026",
+          "top_supplier_bin": "140440015129"
+        },
+        "facts_ok": 5,
+        "facts_n": 5,
+        "examples_ok": 46,
+        "examples_n": 46,
+        "errors": [],
+        "params": {
+          "bins": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.0
+      },
+      {
+        "id": "N1",
+        "question": "Сколько потратил Беркут в 2024-2025 годах",
+        "expected_type": "analytics",
+        "got_type": "analytics",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "y2024_money": true,
+          "y2025_money": true,
+          "total_money": true
+        },
+        "truth": {
+          "n_contracts": 347,
+          "y2024_money": 580194412.57,
+          "y2025_money": 371797462.45,
+          "total_money": 951991875.02
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 11,
+        "examples_n": 11,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.0
+      },
+      {
+        "id": "N2",
+        "question": "Какова сумма договоров 960440000220 за 2025 год",
+        "expected_type": "analytics",
+        "got_type": "analytics",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "total_money": true,
+          "top_supplier_bin": true,
+          "top_supplier_money": true
+        },
+        "truth": {
+          "n_contracts": 9,
+          "total_money": 43540856000.0,
+          "top_supplier_bin": "990740002243",
+          "top_supplier_money": 28993965000.0
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 6,
+        "examples_n": 6,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.0
+      },
+      {
+        "id": "N3",
+        "question": "Беркут 2025 жылы қанша жұмсады",
+        "expected_type": "analytics",
+        "got_type": "analytics",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "total_money": true
+        },
+        "truth": {
+          "n_contracts": 178,
+          "total_money": 371797462.45
+        },
+        "facts_ok": 2,
+        "facts_n": 2,
+        "examples_ok": 11,
+        "examples_n": 11,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true,
+          "lang": true
+        },
+        "params_ok": 3,
+        "params_n": 3,
+        "seconds": 0.0
+      },
+      {
+        "id": "N4",
+        "question": "Структура закупок 020440003656 по способам закупки в 2025 году",
+        "expected_type": "analytics",
+        "got_type": "analytics",
+        "type_ok": true,
+        "facts": {
+          "top_method_money": true,
+          "n_top_method": true
+        },
+        "truth": {
+          "top_method_money": 2227103520.15,
+          "n_top_method": 85
+        },
+        "facts_ok": 2,
+        "facts_n": 2,
+        "examples_ok": 11,
+        "examples_n": 11,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.0
+      },
+      {
+        "id": "C1",
+        "question": "Сравни заказчиков по сумме договоров за 2025",
+        "expected_type": "compare",
+        "got_type": "compare",
+        "type_ok": true,
+        "facts": {
+          "top_bin": true,
+          "top_money": true,
+          "n_contracts": true
+        },
+        "truth": {
+          "top_bin": "960440000220",
+          "top_money": 43540856000.0,
+          "n_contracts": 10637.0
+        },
+        "facts_ok": 3,
+        "facts_n": 3,
+        "examples_ok": 27,
+        "examples_n": 27,
+        "errors": [],
+        "params": {
+          "years": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.1
+      },
+      {
+        "id": "C2",
+        "question": "Сравни цены по коду 192026.510.000000 между заказчиками",
+        "expected_type": "compare",
+        "got_type": "compare",
+        "type_ok": true,
+        "facts": {
+          "high_bin": true,
+          "high_price": true,
+          "low_bin": true,
+          "low_price": true
+        },
+        "truth": {
+          "high_bin": "000740001307",
+          "high_price": 389.7419392133767,
+          "low_bin": "971040001050",
+          "low_price": 300.4158942562928
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 11,
+        "examples_n": 11,
+        "errors": [],
+        "params": {
+          "enstru": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.0
+      },
+      {
+        "id": "C3",
+        "question": "Сравни закупки 000740001307 по годам",
+        "expected_type": "compare",
+        "got_type": "compare",
+        "type_ok": true,
+        "facts": {
+          "y2024_money": true,
+          "y2025_money": true,
+          "y2026_money": true,
+          "n_contracts": true
+        },
+        "truth": {
+          "y2024_money": 580194412.57,
+          "y2025_money": 371797462.45,
+          "y2026_money": 455487206.71,
+          "n_contracts": 496
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {
+          "bins": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.0
+      },
+      {
+        "id": "C4",
+        "question": "192026.510.000000 коды бойынша тапсырыс берушілердің бағаларын салыстыр",
+        "expected_type": "compare",
+        "got_type": "compare",
+        "type_ok": true,
+        "facts": {
+          "high_bin": true,
+          "high_price": true,
+          "low_bin": true,
+          "low_price": true
+        },
+        "truth": {
+          "high_bin": "000740001307",
+          "high_price": 389.7419392133767,
+          "low_bin": "971040001050",
+          "low_price": 300.4158942562928
+        },
+        "facts_ok": 4,
+        "facts_n": 4,
+        "examples_ok": 11,
+        "examples_n": 11,
+        "errors": [],
+        "params": {
+          "enstru": true,
+          "lang": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.0
+      }
+    ]
+  },
+  {
+    "summary": {
+      "title": "Отложенная выборка (вопросы заказчика)",
+      "questions": 15,
+      "seconds": 3.4,
+      "fact_accuracy": 25.7,
+      "facts_ok": 9,
+      "facts_n": 35,
+      "recall": 25.7,
+      "recall_ok": 9,
+      "recall_n": 35,
+      "precision": 100.0,
+      "precision_ok": 376,
+      "precision_n": 376,
+      "type_accuracy": 86.7,
+      "params_accuracy": 100.0,
+      "fully_correct": 3,
+      "by_type": {
+        "search": 33.3,
+        "compare": 27.3,
+        "fairness": 25.0,
+        "analytics": 0.0
+      },
+      "passed": false,
+      "target": 85.0,
+      "langs": {
+        "ru": 8,
+        "kz": 7
+      }
+    },
+    "cases": [
+      {
+        "id": "H1",
+        "question": "Найди все закупки дизельного топлива в Астане за 2025 год.",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": false,
+          "total_money": false,
+          "top_contract_id": false
+        },
+        "truth": {
+          "n_contracts": 31,
+          "total_money": 714578297.07,
+          "top_contract_id": "24003493"
+        },
+        "facts_ok": 0,
+        "facts_n": 3,
+        "examples_ok": 53,
+        "examples_n": 53,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.2
+      },
+      {
+        "id": "H2",
+        "question": "Сравни цены на бензин АИ-92 в Алматы за 2024 и 2025 годы.",
+        "expected_type": "compare",
+        "got_type": "compare",
+        "type_ok": true,
+        "facts": {
+          "y2024_price": false,
+          "n_2024": true,
+          "y2025_price": false,
+          "n_2025": false
+        },
+        "truth": {
+          "y2024_price": 257.28665071465167,
+          "n_2024": 6,
+          "y2025_price": 219.4159501968146,
+          "n_2025": 8
+        },
+        "facts_ok": 1,
+        "facts_n": 4,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.0
+      },
+      {
+        "id": "H3",
+        "question": "Рассчитай справедливую цену для лота №123456 с учетом инфляции.",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "текст «не найден»": true
+        },
+        "truth": {},
+        "facts_ok": 1,
+        "facts_n": 1,
+        "examples_ok": 0,
+        "examples_n": 0,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.1
+      },
+      {
+        "id": "H4",
+        "question": "Найди договоры на закупку офисной бумаги за 2025 год, где цена превышает справедливую более чем на 30%.",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "n_over": false,
+          "n_priced": true,
+          "top_contract_id": false
+        },
+        "truth": {
+          "n_over": 24,
+          "n_priced": 75,
+          "top_contract_id": "22116714"
+        },
+        "facts_ok": 1,
+        "facts_n": 3,
+        "examples_ok": 34,
+        "examples_n": 34,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.2
+      },
+      {
+        "id": "H5",
+        "question": "Какие организации закупили наибольшее количество дизельного топлива в 2025 году?",
+        "expected_type": "analytics/compare",
+        "got_type": "volume",
+        "type_ok": false,
+        "facts": {
+          "top_bin": false,
+          "top_qty": false
+        },
+        "truth": {
+          "top_bin": "990740002243",
+          "top_qty": 930258.0
+        },
+        "facts_ok": 0,
+        "facts_n": 2,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.2
+      },
+      {
+        "id": "H6",
+        "question": "Покажи подробную информацию по договору №567890.",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "текст «не найден»": false
+        },
+        "truth": {},
+        "facts_ok": 0,
+        "facts_n": 1,
+        "examples_ok": 47,
+        "examples_n": 47,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.2
+      },
+      {
+        "id": "H7",
+        "question": "Сравни стоимость закупки ноутбуков в Астане и Алматы за 2026 год.",
+        "expected_type": "compare",
+        "got_type": "compare",
+        "type_ok": true,
+        "facts": {
+          "astana_price": false,
+          "n_astana": true,
+          "n_almaty": false
+        },
+        "truth": {
+          "astana_price": 600382.4561883253,
+          "n_astana": 5,
+          "n_almaty": 0
+        },
+        "facts_ok": 1,
+        "facts_n": 3,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {},
+        "params_ok": 0,
+        "params_n": 0,
+        "seconds": 0.2
+      },
+      {
+        "id": "H8",
+        "question": "Найди закупки организации с БИН 000740001307 за 2024 год.",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true,
+          "total_money": true,
+          "top_contract_id": true
+        },
+        "truth": {
+          "n_contracts": 169,
+          "total_money": 580194412.57,
+          "top_contract_id": "19133397"
+        },
+        "facts_ok": 3,
+        "facts_n": 3,
+        "examples_ok": 50,
+        "examples_n": 50,
+        "errors": [],
+        "params": {
+          "bins": true,
+          "years": true
+        },
+        "params_ok": 2,
+        "params_n": 2,
+        "seconds": 0.0
+      },
+      {
+        "id": "H9",
+        "question": "2025 жылы Астана қаласында дизель отынын сатып алу туралы мәліметтерді көрсет.",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": false,
+          "total_money": false,
+          "top_contract_id": false
+        },
+        "truth": {
+          "n_contracts": 31,
+          "total_money": 714578297.07,
+          "top_contract_id": "24003493"
+        },
+        "facts_ok": 0,
+        "facts_n": 3,
+        "examples_ok": 53,
+        "examples_n": 53,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.4
+      },
+      {
+        "id": "H10",
+        "question": "2024 және 2025 жылдардағы Алматы қаласындағы бензин бағаларын салыстыр.",
+        "expected_type": "compare",
+        "got_type": "compare",
+        "type_ok": true,
+        "facts": {
+          "y2024_price": false,
+          "n_2024": true,
+          "y2025_price": false,
+          "n_2025": false
+        },
+        "truth": {
+          "y2024_price": 257.28665071465167,
+          "n_2024": 6,
+          "y2025_price": 219.4159501968146,
+          "n_2025": 8
+        },
+        "facts_ok": 1,
+        "facts_n": 4,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.2
+      },
+      {
+        "id": "H11",
+        "question": "№987654 лот бойынша инфляцияны ескере отырып, әділ бағаны есепте.",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "текст «табылмады»": false
+        },
+        "truth": {},
+        "facts_ok": 0,
+        "facts_n": 1,
+        "examples_ok": 0,
+        "examples_n": 0,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.3
+      },
+      {
+        "id": "H12",
+        "question": "2025 жылы кеңсе қағазын сатып алу кезінде бағасы әділ бағадан 25%-дан артық болған келісімшарттарды анықта.",
+        "expected_type": "fairness",
+        "got_type": "fairness",
+        "type_ok": true,
+        "facts": {
+          "n_over": false,
+          "n_priced": false,
+          "top_contract_id": false
+        },
+        "truth": {
+          "n_over": 25,
+          "n_priced": 75,
+          "top_contract_id": "22116714"
+        },
+        "facts_ok": 0,
+        "facts_n": 3,
+        "examples_ok": 35,
+        "examples_n": 35,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.4
+      },
+      {
+        "id": "H13",
+        "question": "2024–2026 жылдар аралығында компьютер сатып алу көлемі қалай өзгерді?",
+        "expected_type": "analytics/compare",
+        "got_type": "volume",
+        "type_ok": false,
+        "facts": {
+          "y2024_qty": false,
+          "y2025_qty": false
+        },
+        "truth": {
+          "y2024_qty": 20.0,
+          "y2025_qty": 56.0,
+          "y2026_qty": null
+        },
+        "facts_ok": 0,
+        "facts_n": 2,
+        "examples_ok": 1,
+        "examples_n": 1,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.3
+      },
+      {
+        "id": "H14",
+        "question": "№567890 келісімшарттың толық ақпаратын көрсет.",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "текст «табылмады»": false
+        },
+        "truth": {},
+        "facts_ok": 0,
+        "facts_n": 1,
+        "examples_ok": 46,
+        "examples_n": 46,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.4
+      },
+      {
+        "id": "H15",
+        "question": "2025 жылы Шымкент қаласында мектеп жиһазын сатып алу туралы мәліметтерді тап.",
+        "expected_type": "search",
+        "got_type": "search",
+        "type_ok": true,
+        "facts": {
+          "n_contracts": true
+        },
+        "truth": {
+          "n_contracts": 0,
+          "total_money": null,
+          "top_contract_id": null
+        },
+        "facts_ok": 1,
+        "facts_n": 1,
+        "examples_ok": 53,
+        "examples_n": 53,
+        "errors": [],
+        "params": {
+          "lang": true
+        },
+        "params_ok": 1,
+        "params_n": 1,
+        "seconds": 0.5
+      }
+    ]
+  }
+]

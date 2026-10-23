@@ -1,0 +1,16 @@
+# секреты — только через переменные окружения
+*.env
+# данные — на томе, не в образе
+raw/
+raw_market/
+logs/
+market_codes.json
+# модель, кэши, служебное
+Qwan3-4B/
+__pycache__/
+**/__pycache__/
+.deepeval/
+.git/
+eval/results.json
+eval/report.md
+*.pdf

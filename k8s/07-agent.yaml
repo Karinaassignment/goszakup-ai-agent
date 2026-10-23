@@ -1,0 +1,47 @@
+# API агента: POST /ask, GET /health, GET /docs
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agent
+  namespace: goszakup
+spec:
+  replicas: 2
+  selector:
+    matchLabels: {app: agent}
+  template:
+    metadata:
+      labels: {app: agent}
+    spec:
+      securityContext:
+        runAsNonRoot: true
+      containers:
+        - name: agent
+          image: goszakup-agent:1.0          # замените на образ из своего реестра
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef: {name: goszakup-config}
+          env:
+            - name: AGENT_DB_PASSWORD        # только роль agent_ro, без токена OWS
+              valueFrom: {secretKeyRef: {name: goszakup-secrets, key: AGENT_DB_PASSWORD}}
+          readinessProbe:
+            httpGet: {path: /health, port: 8000}
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /health, port: 8000}
+            initialDelaySeconds: 20
+            periodSeconds: 30
+          resources:
+            requests: {cpu: 250m, memory: 512Mi}
+            limits: {memory: 1Gi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: agent
+  namespace: goszakup
+spec:
+  selector: {app: agent}
+  ports:
+    - port: 8000
+      targetPort: 8000
